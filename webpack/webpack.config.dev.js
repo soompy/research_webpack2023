@@ -4,6 +4,7 @@ const { merge } = require('webpack-merge');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
+
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -30,7 +31,7 @@ module.exports = merge(common, {
     }),
     new StylelintPlugin({
       files: Path.join('src', '**/*.s?(a|c)ss'),
-    }),
+    }),    
   ],
   module: {
     rules: [
